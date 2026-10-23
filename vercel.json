@@ -1,0 +1,7 @@
+{
+  "trailingSlash": true,
+  "redirects": [
+    { "source": "/home", "destination": "/", "permanent": true },
+    { "source": "/press-kit-copy", "destination": "/presskit/", "permanent": true }
+  ]
+}
