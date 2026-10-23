@@ -267,3 +267,8 @@ h3{font-size:22px}
 
 /* black nav bar on every page without a full-bleed photo under the header */
 body:not(.overlay-header) .site-header{background:#000;color:#fff;padding-top:22px;padding-bottom:22px}
+
+/* wordmark from the splash-page artwork */
+.brand{display:block;line-height:0}
+.brand img{height:21px;width:auto;display:block}
+@media (max-width:900px){.brand img{height:18px}}
