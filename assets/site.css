@@ -264,3 +264,6 @@ h3{font-size:22px}
 .fest h2,.credit-section{font-size:24px}
 .credit h3{font-size:14px;letter-spacing:.06em}
 .maker h3{text-transform:uppercase}
+
+/* black nav bar on every page without a full-bleed photo under the header */
+body:not(.overlay-header) .site-header{background:#000;color:#fff;padding-top:22px;padding-bottom:22px}
