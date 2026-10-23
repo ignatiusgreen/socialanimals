@@ -76,7 +76,7 @@ h3{font-size:18px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 14px}
 .slide{width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.4s ease}
 .slide.is-on{opacity:1}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.45),transparent 25%)}
-.hero-frame{position:absolute;z-index:2;left:50%;top:46%;transform:translate(-50%,-50%);height:min(58vh,calc(62vw * 1.485));width:auto;max-width:none;pointer-events:none}
+.hero-frame{position:absolute;z-index:2;left:50%;top:47%;transform:translate(-50%,-50%);height:min(76vh,calc(80vw * 1.485));height:min(76svh,calc(80vw * 1.485));width:auto;max-width:none;pointer-events:none}
 .hero-bar{position:absolute;z-index:3;left:0;right:0;bottom:clamp(28px,6vh,48px);display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px 26px;padding:0 16px}
 .hero-bar>a{font:500 12px/1 var(--display);letter-spacing:.22em;text-transform:uppercase;text-decoration:none;color:#fff;padding:6px 0;border-bottom:1px solid transparent}
 .hero-bar>a:hover{border-color:#fff}
