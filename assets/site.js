@@ -42,3 +42,21 @@
     document.body.appendChild(box); show(idx); box.querySelector('.lb-close').focus();
   });
 })();
+
+// gallery slideshows
+document.querySelectorAll('.slideshow').forEach(function (ss) {
+  var main = ss.querySelector('.ss-main'), thumbs = Array.prototype.slice.call(ss.querySelectorAll('.ss-thumb')), i = 0;
+  function go(k) {
+    i = (k + thumbs.length) % thumbs.length;
+    thumbs.forEach(function (t, n) { t.classList.toggle('is-active', n === i); });
+    main.classList.add('is-loading');
+    main.onload = function () { main.classList.remove('is-loading'); };
+    main.src = thumbs[i].dataset.full;
+    var t = thumbs[i], strip = t.parentElement;
+    strip.scrollLeft = t.offsetLeft - strip.clientWidth / 2 + t.clientWidth / 2;
+  }
+  thumbs.forEach(function (t, n) { t.addEventListener('click', function () { go(n); }); });
+  ss.querySelector('.ss-prev').addEventListener('click', function () { go(i - 1); });
+  ss.querySelector('.ss-next').addEventListener('click', function () { go(i + 1); });
+  ss.addEventListener('keydown', function (e) { if (e.key === 'ArrowLeft') go(i - 1); if (e.key === 'ArrowRight') go(i + 1); });
+});
