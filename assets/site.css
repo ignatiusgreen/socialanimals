@@ -272,3 +272,9 @@ body:not(.overlay-header) .site-header{background:#000;color:#fff;padding-top:22
 .brand{display:block;line-height:0}
 .brand img{height:21px;width:auto;display:block}
 @media (max-width:900px){.brand img{height:18px}}
+
+/* larger, brighter nav links for legibility */
+.nav-left a,.nav-right a{font-size:13px;font-weight:500;letter-spacing:.2em;opacity:1}
+.nav-left a:hover,.nav-right a:hover{opacity:.75}
+.nav-left a[aria-current],.nav-right a[aria-current]{font-weight:700}
+.overlay-header .nav-left a,.overlay-header .nav-right a{text-shadow:0 1px 6px rgba(0,0,0,.55)}
